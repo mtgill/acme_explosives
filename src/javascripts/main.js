@@ -1,4 +1,9 @@
 import 'bootstrap';
 import '../styles/main.scss';
+import categories from '../components/categories/categories';
 
-console.error('main js');
+const init = () => {
+  categories.initCategories();
+};
+
+init();
