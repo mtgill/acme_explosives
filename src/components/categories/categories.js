@@ -1,5 +1,6 @@
 import categoryData from '../../helpers/data/categoryData';
 import util from '../../helpers/util';
+import typeData from '../../helpers/data/typeData';
 
 const writeCategories = (categories) => {
   let domString = '';
@@ -20,6 +21,7 @@ const initCategories = () => {
     .then((resp) => {
       writeCategories(resp.data.categories);
     })
+    .then(resp => typeData.loadTypesForCategories(resp.data.categories))
     .catch(err => console.error(err));
 };
 
