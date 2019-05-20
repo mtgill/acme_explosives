@@ -3,7 +3,8 @@ import axios from 'axios';
 const loadProductsForTypes = categoriesWithTypes => new Promise((resolve, reject) => {
   axios.get('../db/products.json')
     .then((resp) => {
-      const { products } = resp.data.products;
+      const { products } = resp.data;
+      console.error(products);
       const typesWithProducts = categoriesWithTypes.map((type) => {
         const newType = type;
         const matchingProducts = products.filter(product => product.type === type.id);

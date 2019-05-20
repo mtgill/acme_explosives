@@ -19,7 +19,6 @@ const writeProducts = (products) => {
 
 const initProducts = () => {
   categoryData.loadCategories();
-  typeData.loadTypesForCategories();
   productData.loadProductsForTypes()
     .then(resp => typeData.loadTypesForCategories(resp.data.categories))
     .then((resp) => {

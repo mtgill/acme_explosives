@@ -22,6 +22,7 @@ const initCategories = () => {
   categoryData.loadCategories()
     // .then((resp) => {
     //   writeCategories(resp.data.categories);
+    // .then(resp => productData.loadProductsForTypes(resp.data.types))
     .then(resp => typeData.loadTypesForCategories(resp.data.categories))
     // .then(resp => productData.loadProductsForTypes
     // (typeData.loadTypesForCategories(resp.data.categories)))
