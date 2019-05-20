@@ -1,4 +1,6 @@
 import productData from '../../helpers/data/productData';
+import typeData from '../../helpers/data/typeData';
+import categoryData from '../../helpers/data/categoryData';
 import util from '../../helpers/util';
 
 const writeProducts = (products) => {
@@ -16,9 +18,12 @@ const writeProducts = (products) => {
 };
 
 const initProducts = () => {
-  productData.loadProducts()
+  categoryData.loadCategories();
+  typeData.loadTypesForCategories();
+  productData.loadProductsForTypes()
+    .then(resp => typeData.loadTypesForCategories(resp.data.categories))
     .then((resp) => {
-      console.error(resp.data.products['0']['grucci-mineshell-mayhem-16-shot']);
+      // console.error(resp.data.products['0']['grucci-mineshell-mayhem-16-shot']);
       writeProducts(resp.data.products);
     })
     .catch(err => console.error(err));
