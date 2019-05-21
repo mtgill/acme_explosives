@@ -18,13 +18,15 @@ const writeProducts = (products) => {
 };
 
 const initProducts = () => {
-  categoryData.loadCategories();
-  productData.loadProductsForTypes()
+  categoryData.loadCategories()
     .then(resp => typeData.loadTypesForCategories(resp.data.categories))
-    .then((resp) => {
-      // console.error(resp.data.products['0']['grucci-mineshell-mayhem-16-shot']);
-      writeProducts(resp.data.products);
+    .then((categoriesWithTypes) => {
+      productData.loadProductsForTypes(categoriesWithTypes)
+        .then(resp => console.error(`product data ${resp.data.types}`));
     })
+    .catch(err => console.error(err));
+  typeData.loadTypesForCategories()
+    .then(resp => productData.loadProductsForTypes(resp.data.types))
     .catch(err => console.error(err));
 };
 

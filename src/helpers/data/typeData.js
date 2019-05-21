@@ -10,7 +10,7 @@ const loadTypesForCategories = categories => new Promise((resolve, reject) => {
         newCategory.types = matchingTypes;
         return newCategory;
       });
-      console.error('success');
+      console.error(categoriesWithTypes);
       resolve(categoriesWithTypes);
     })
     .catch(err => reject(err));
