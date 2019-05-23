@@ -3,11 +3,13 @@ import axios from 'axios';
 const loadTypesForCategories = categories => new Promise((resolve, reject) => {
   axios.get('../db/types.json')
     .then((resp) => {
-      const { types } = resp.data;
+      const allTypes = resp.data.types;
+      console.error(`types ${allTypes}`);
       const categoriesWithTypes = categories.map((category) => {
         const newCategory = category;
-        const matchingTypes = types.filter(type => type.category === category.id);
+        const matchingTypes = allTypes.filter(type => type.category === category.id);
         newCategory.types = matchingTypes;
+        console.error(`matching types ${newCategory.types}`);
         return newCategory;
       });
       console.error(categoriesWithTypes);
