@@ -12,6 +12,7 @@ const loadProductsForTypes = categoriesWithTypes => new Promise((resolve, reject
               productArray.push({
                 name: product.name,
                 category: categoriesWithTypes[i].name,
+                categoryId: categoriesWithTypes[i].id,
                 type: categoriesWithTypes[i].types[j].name,
                 description: product.description,
               });
@@ -19,7 +20,6 @@ const loadProductsForTypes = categoriesWithTypes => new Promise((resolve, reject
           });
         }
       }
-      console.error('product array ', productArray);
       resolve(productArray);
     })
     .catch(err => reject(err));
