@@ -5,6 +5,10 @@ This app acts as a storefront for Acme Explosives. You can sort the products by 
 
 ## Screenshots
 
+![acme-explosives screenshot-1](https://raw.githubusercontent.com/mtgill/acme_explosives/master/assets/screenshots/screenshot-1.PNG "acme-explosives screenshot-1")
+
+![acme-explosives screenshot-2](https://raw.githubusercontent.com/mtgill/acme_explosives/master/assets/screenshots/screenshot-2.PNG "acme-explosives screenshot-2")
+
 ## Installation Instructions
 * Clone down this repo
 * At the root of the project, run npm install
