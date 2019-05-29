@@ -12,13 +12,13 @@ const writeProducts = (products) => {
   let domString = '';
   if (allButton.checked === true) {
     products.forEach((product) => {
-      domString += '<div class="col-3">';
+      domString += '<div class="col-3 card-group">';
       domString += `<div id='${product.name}' class="card p-2">`;
       domString += '<div class="card-body">';
       domString += `<h5 class="card-title">${product.name}</h5>`;
-      domString += `<h6>Type: ${product.type}</h6>`;
-      domString += `<h6>Category: ${product.category}</h6>`;
-      domString += `<h6>Description: ${product.description}</h6>`;
+      domString += `<h6 class="card-info">Type: ${product.type}</h6>`;
+      domString += `<h6 class="card-info">Category: ${product.category}</h6>`;
+      domString += `<h6 class="card-info">Description: ${product.description}</h6>`;
       domString += '</div>';
       domString += '</div>';
       domString += '</div>';
@@ -27,13 +27,13 @@ const writeProducts = (products) => {
   } else if (groundButton.checked === true) {
     products.forEach((product) => {
       if (product.categoryId === groundButton.id) {
-        domString += '<div class="col-3">';
+        domString += '<div class="col-3 card-group">';
         domString += `<div id='${product.name}' class="card p-2">`;
         domString += '<div class="card-body">';
         domString += `<h5 class="card-title">${product.name}</h5>`;
-        domString += `<h6>Type: ${product.type}</h6>`;
-        domString += `<h6>Category: ${product.category}</h6>`;
-        domString += `<h6>Description: ${product.description}</h6>`;
+        domString += `<h6 class="card-info">Type: ${product.type}</h6>`;
+        domString += `<h6 class="card-info">Category: ${product.category}</h6>`;
+        domString += `<h6 class="card-info">Description: ${product.description}</h6>`;
         domString += '</div>';
         domString += '</div>';
         domString += '</div>';
@@ -43,13 +43,13 @@ const writeProducts = (products) => {
   } else if (aerialButton.checked === true) {
     products.forEach((product) => {
       if (product.categoryId === aerialButton.id) {
-        domString += '<div class="col-3">';
+        domString += '<div class="col-3 card-group">';
         domString += `<div id='${product.name}' class="card p-2">`;
         domString += '<div class="card-body">';
         domString += `<h5 class="card-title">${product.name}</h5>`;
-        domString += `<h6>Type: ${product.type}</h6>`;
-        domString += `<h6>Category: ${product.category}</h6>`;
-        domString += `<h6>Description: ${product.description}</h6>`;
+        domString += `<h6 class="card-info">Type: ${product.type}</h6>`;
+        domString += `<h6 class="card-info">Category: ${product.category}</h6>`;
+        domString += `<h6 class="card-info">Description: ${product.description}</h6>`;
         domString += '</div>';
         domString += '</div>';
         domString += '</div>';
