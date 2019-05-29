@@ -12,18 +12,21 @@
           Categories
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="dropdown">
-            <label class="btn btn-secondary active">
-            <input type="radio" name="categories" class="dropdown-item" id="all" checked>All</label>
+          <div>
+            <label class="btn btn-info active category-button">
+            <input type="radio" name="categories" class="dropdown-item" id="all" checked>All</label></div>
+            
+            <div>
+            <label class="btn btn-danger active category-button">
+            <input type="radio" name="categories" class="dropdown-item" id="ground">Ground & Non-Aerial</label></div>
           
-            <label class="btn btn-secondary active">
-            <input type="radio" name="categories" class="dropdown-item" id="ground">Ground & Non-Aerial</label>
-          
-            <label class="btn btn-secondary active">
-              <input type="radio" name="categories"  class="dropdown-item" id="aerial">Aerial</label>
+            <div>
+            <label class="btn btn-success active category-button">
+              <input type="radio" name="categories"  class="dropdown-item" id="aerial">Aerial</label></div>
         </div>
       </div>
-  <div id="product-page" class="page-container text-center">
-    <h1>My Products</h1>
+  <div id="product-page" class="page-container">
+    <h1 id="page-title">My Products</h1>
     <div id="products" class="d-flex flex-wrap"></div>
   </div>
   </div>
