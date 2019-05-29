@@ -6,8 +6,23 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Acme Explosives</title>
 </head>
-<body class="text-center">
-  <div id="product-page" class="page-container">
+<body>
+    <div class="dropdown">
+        <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Categories
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="dropdown">
+            <label class="btn btn-secondary active">
+            <input type="radio" name="categories" class="dropdown-item" id="all" checked>All</label>
+          
+            <label class="btn btn-secondary active">
+            <input type="radio" name="categories" class="dropdown-item" id="ground">Ground & Non-Aerial</label>
+          
+            <label class="btn btn-secondary active">
+              <input type="radio" name="categories"  class="dropdown-item" id="aerial">Aerial</label>
+        </div>
+      </div>
+  <div id="product-page" class="page-container text-center">
     <h1>My Products</h1>
     <div id="products" class="d-flex flex-wrap"></div>
   </div>
