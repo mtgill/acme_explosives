@@ -5,7 +5,8 @@
   "main": "src/javascripts/main.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
-    "build": "webpack --mode production --module-bind js=babel-loader"
+    "build": "webpack --mode production --module-bind js=babel-loader",
+    "deploy": "npm run build && firebase deploy"
   },
   "repository": {
     "type": "git",
@@ -40,6 +41,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "bootstrap": "^4.3.1",
+    "firebase": "^6.2.2",
     "jquery": "^3.4.1",
     "popper.js": "^1.15.0"
   }
